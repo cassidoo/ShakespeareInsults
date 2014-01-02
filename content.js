@@ -26,4 +26,9 @@ var finalblow = ['apple-john', 'baggage', 'barnacle', 'bladder', 'boar-pig', 'bu
                  'malt-worm', 'mammet', 'measle', 'minnow', 'miscreant', 'moldwarp', 'mumble-news', 'nit', 'nut-hook', 'pigeon-egg', 'pignut', 'pumpion', 
                  'puttock', 'ratsbane', 'rudesby', 'scut', 'skainsmate', 'strumpet', 'varlot', 'vassal', 'wagtail', 'water-fly', 'whey-face', 
                  'winter-cricket'];
-                 
+
+function randomCombo()
+{
+    return initialblow[Math.floor(Math.random()*(initialblow.length))] + " thou " + secondblow[Math.floor(Math.random()*(secondblow.length))] 
+            + " " + thirdblow[Math.floor(Math.random()*(thirdblow.length))] + " " + finalblow[Math.floor(Math.random()*(finalblow.length))] + ".";
+}
