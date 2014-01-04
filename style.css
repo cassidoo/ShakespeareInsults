@@ -1,0 +1,32 @@
+body
+{
+	font-family: 'IM Fell English', serif;
+	background: #880000;
+}
+
+.flame
+{
+	display: block;
+	width: 126px;
+	/* width has to be 70% of height */
+	/* could use width:70%; in a square container */
+	height: 180px;
+	background-color: green;
+	/* beware that Safari needs actual
+	 px for border radius (bug) */
+	-webkit-border-radius: 63px 63px 63px 63px/108px 108px 72px 72px;
+	/* fails in Safari, but overwrites in Chrome */
+	border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+	
+	background: #ffc300; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffc300 0%, #ff3b00 69%, #ff7400 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffc300), color-stop(69%,#ff3b00), color-stop(100%,#ff7400)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ffc300 0%,#ff3b00 69%,#ff7400 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ffc300 0%,#ff3b00 69%,#ff7400 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ffc300 0%,#ff3b00 69%,#ff7400 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #ffc300 0%,#ff3b00 69%,#ff7400 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc300', endColorstr='#ff7400',GradientType=0 ); /* IE6-9 */
+	-moz-box-shadow: inset 2px 8px 59px #ffea00;
+	-webkit-box-shadow: inset 2px 8px 59px #ffea00;
+	box-shadow: inset 2px 8px 59px #ffea00;
+}

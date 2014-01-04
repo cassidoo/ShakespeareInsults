@@ -32,3 +32,8 @@ function randomCombo()
     return initialblow[Math.floor(Math.random()*(initialblow.length))] + " thou " + secondblow[Math.floor(Math.random()*(secondblow.length))] 
             + " " + thirdblow[Math.floor(Math.random()*(thirdblow.length))] + " " + finalblow[Math.floor(Math.random()*(finalblow.length))] + ".";
 }
+
+function generateToPage()
+{
+    document.getElementById("insult").innerHTML = randomCombo();
+}
