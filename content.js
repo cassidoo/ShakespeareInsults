@@ -29,7 +29,7 @@ var finalblow = ['apple-john', 'baggage', 'barnacle', 'bladder', 'boar-pig', 'bu
 
 function randomCombo()
 {
-    return initialblow[Math.floor(Math.random()*(initialblow.length))] + " thou " + secondblow[Math.floor(Math.random()*(secondblow.length))] 
+    return initialblow[Math.floor(Math.random()*(initialblow.length))] + ", thou " + secondblow[Math.floor(Math.random()*(secondblow.length))] 
             + " " + thirdblow[Math.floor(Math.random()*(thirdblow.length))] + " " + finalblow[Math.floor(Math.random()*(finalblow.length))] + ".";
 }
 

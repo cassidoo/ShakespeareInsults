@@ -1,32 +1,167 @@
 body
 {
 	font-family: 'IM Fell English', serif;
-	background: #880000;
+	background: #ce661c;
+}
+
+#insult
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 15px;
+	font-size: 65px;
+	width: 50%;
+	height: 500px;
+	background: #df772d;
+}
+
+.candle
+{
+	position: absolute;
+	right: 20%;
+	top: 25%;
 }
 
 .flame
 {
-	display: block;
-	width: 126px;
-	/* width has to be 70% of height */
-	/* could use width:70%; in a square container */
-	height: 180px;
-	background-color: green;
-	/* beware that Safari needs actual
-	 px for border radius (bug) */
-	-webkit-border-radius: 63px 63px 63px 63px/108px 108px 72px 72px;
-	/* fails in Safari, but overwrites in Chrome */
-	border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
-	
-	background: #ffc300; /* Old browsers */
-	background: -moz-linear-gradient(top, #ffc300 0%, #ff3b00 69%, #ff7400 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffc300), color-stop(69%,#ff3b00), color-stop(100%,#ff7400)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #ffc300 0%,#ff3b00 69%,#ff7400 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #ffc300 0%,#ff3b00 69%,#ff7400 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #ffc300 0%,#ff3b00 69%,#ff7400 100%); /* IE10+ */
-	background: linear-gradient(to bottom, #ffc300 0%,#ff3b00 69%,#ff7400 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc300', endColorstr='#ff7400',GradientType=0 ); /* IE6-9 */
-	-moz-box-shadow: inset 2px 8px 59px #ffea00;
-	-webkit-box-shadow: inset 2px 8px 59px #ffea00;
-	box-shadow: inset 2px 8px 59px #ffea00;
+	position: relative;
+}
+
+.flame:before
+{
+	content: "";
+	position: absolute;
+	top: -9px;
+	left: 50%;
+	margin-left: -23px;
+	width: 46px;
+	height: 46px;
+	background: linear-gradient(40deg, white 0%, yellow 20%, gold 50%, orange 100%);
+	border-radius: 50% 0 50% 50%;
+	box-shadow: 2px -2px 5px 3px orange;
+	transform: rotate(-45deg);
+	animation: flicker 3s linear 0s infinite;
+	-webkit-animation: flicker 3s linear 0s infinite;
+	-o-animation: flicker 3s linear 0s infinite;
+	z-index: 70;
+}
+
+.flame:after
+{
+	content: "";
+	position: absolute;
+	top: 40px;
+	left: 50%;
+	width: 4px;
+	margin-left: -2px;
+	height: 20px;
+	background: #000;
+	border-radius: 4px 4px 0 0;
+	z-index: 60;
+}
+
+.waxtop
+{
+	margin-bottom: -13px;
+	width: 50px;
+	height: 26px;
+	background: #f9ce5e;
+	-moz-border-radius: 25px /12px;
+	-webkit-border-radius: 25px /12px;
+	border-radius: 25px /12px;
+	z-index: 55;
+}
+
+.wax
+{
+	width: 50px;
+	height: 500px;
+	background: #f9ce5e; /* Old browsers */
+	background: -moz-linear-gradient(left, #f9ce5e 0%, #fceabb 36%, #fbdf93 57%, #f9ce5e 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f9ce5e), color-stop(36%,#fceabb), color-stop(57%,#fbdf93), color-stop(100%,#f9ce5e)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, #f9ce5e 0%,#fceabb 36%,#fbdf93 57%,#f9ce5e 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #f9ce5e 0%,#fceabb 36%,#fbdf93 57%,#f9ce5e 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #f9ce5e 0%,#fceabb 36%,#fbdf93 57%,#f9ce5e 100%); /* IE10+ */
+	background: linear-gradient(to right, #f9ce5e 0%,#fceabb 36%,#fbdf93 57%,#f9ce5e 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9ce5e', endColorstr='#f9ce5e',GradientType=1 ); /* IE6-9 */
+	z-index: 50;
+}
+
+@keyframes flicker {
+0%{
+transform: rotate(-47deg);
+}
+
+20%{
+transform: rotate(-43deg);
+}
+
+40% {
+transform: rotate(-47deg);
+}
+
+60% {
+transform: rotate(-43deg) scaleY(1.02);
+}
+
+80% {
+transform: rotate(-47deg) scaleY(0.98);
+}
+
+100% {
+transform: rotate(-45deg);
+}
+}
+
+@-webkit-keyframes flicker {
+0%{
+-webkit-transform: rotate(-47deg);
+}
+
+20%{
+-webkit-transform: rotate(-43deg);
+}
+
+40% {
+-webkit-transform: rotate(-47deg);
+}
+
+60% {
+-webkit-transform: rotate(-43deg) scaleY(1.02);
+}
+
+80% {
+-webkit-transform: rotate(-47deg) scaleY(0.98);
+}
+
+100% {
+-webkit-transform: rotate(-45deg);
+}
+}
+
+@-o-keyframes flicker {
+0%{
+-o-transform: rotate(-47deg);
+}
+
+20%{
+-o-transform: rotate(-43deg);
+}
+
+40% {
+-o-transform: rotate(-47deg);
+}
+
+60% {
+-o-transform: rotate(-43deg) scaleY(1.02);
+}
+
+80% {
+-o-transform: rotate(-47deg) scaleY(0.98);
+}
+
+100% {
+-o-transform: rotate(-45deg);
+}
 }
